@@ -18,8 +18,11 @@ for line in lines:
     lower_bound = int(line[0])
     upper_bound = int(line[1])
     if line[3].count(target_letter) >= lower_bound and line[3].count(target_letter) <= upper_bound:
+        print(f"{line[3]} is a valid password!")
         valid_passwords += 1
+    else:
+        print(f"{line[3]} is not a valid password!")
 
 
 #print number of valid passwords
-print(valid_passwords)
+print(f"Number of valid passwords: {valid_passwords}")
